@@ -1,6 +1,7 @@
 from Glue_inference import Glue
 import os
 from PIL import Image
+import torch
 
 
 def test_predict():
@@ -22,3 +23,7 @@ def test_predict():
         w, h = image_infer.size
         result = model.predict(image_infer)
         assert result.size == (w, h)
+
+
+def test_cuda():
+    assert "cuda" if torch.cuda.is_available() else "cpu" == "cuda"

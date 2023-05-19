@@ -52,9 +52,10 @@ threadpoolctl==3.1.0
 tifffile==2023.4.12
 tomli==2.0.1
 tomlkit==0.11.8
-torch==2.0.1+cu117
-torchaudio==2.0.2+cu117
-torchvision==0.15.2+cu117
+#--find-links https://download.pytorch.org/whl/cu117
+#torch==2.0.1+cu117
+#torchaudio==2.0.2+cu117
+#torchvision==0.15.2+cu117
 typing_extensions==4.5.0
 urllib3==1.26.13
 wrapt==1.15.0
