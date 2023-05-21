@@ -1,8 +1,11 @@
+install_cuda:
+	sudo apt-get install cuda-11-7
+
 install:
 ifeq ($(OS),Windows_NT)
-	sudo apt update && sudo apt-get install cuda-11-7 && pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 && pip install -r requirements.txt
+	pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 && pip install -r requirements.txt
 else
-	sudo apt update && sudo apt-get install cuda-11-7 && pip3 install torch torchvision torchaudio && pip3 install -r requirements.txt
+	pip3 install torch torchvision torchaudio && pip3 install -r requirements.txt
 endif
 
 format:
@@ -14,4 +17,4 @@ lint:
 test:
 	python -m pytest -vv --cov=GLUE test_predict.py 
 
-all: install format test
+all: install_cuda install format test
