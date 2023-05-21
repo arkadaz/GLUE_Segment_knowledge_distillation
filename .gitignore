@@ -1,14 +1,1 @@
-/.vscode
-/dataset.py
-/inference.py
-/Log
-/Log256
-/model.py
-/requirements.txt
-/Result
-/Result.rar
-/test.py
-/train2.py
-/utils.py
-/U_Net_67_0.9401585877139755.pt
-/venv
+venv/
