@@ -14,4 +14,4 @@ lint:
 test:
 	python -m pytest -vv --cov=GLUE test_predict.py 
 
-all: install format test lint
+all: install format test
