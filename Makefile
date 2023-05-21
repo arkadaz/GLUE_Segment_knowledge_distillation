@@ -1,6 +1,5 @@
 install_cuda:
-	sudo apt ubuntu-drivers devices &&\
-	sudo ubuntu-drivers autoinstall
+	sudo apt update
 
 install:
 ifeq ($(OS),Windows_NT)
